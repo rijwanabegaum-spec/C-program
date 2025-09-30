@@ -1,2 +1,2 @@
 # C-program
-Learning C program in Cisco
+programs using C
