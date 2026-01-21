@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main () {
+
+int a = 5;
+float b = 6.2;
+double c = 5.25;
+float sum = a+b+c;
+printf ("the sum of a, b, c is %.2f", sum);
+return 0;
+}
