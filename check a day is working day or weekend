@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char day[10];
+
+    printf("Enter day name: ");
+    scanf("%s", day);
+
+    if (strcmp(day, "Saturday") == 0 || strcmp(day, "Sunday") == 0)
+        printf("Weekend\n");
+    else
+        printf("Working Day\n");
+
+    return 0;
+}
