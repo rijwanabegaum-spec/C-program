@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int marks;
+   
+    printf("Enter your total marks (out of 500): ");
+    scanf("%d", &marks);
+    if (marks < 0 || marks > 500) {
+        printf("Invalid marks! Please enter a value between 0 and 500.\n");
+        return 1;
+    }
+
+    if (marks >= 250)
+        printf("Congratulations! You have PASSED.\n");
+    else
+        printf("Sorry! You have FAILED.\n");
+
+    return 0;
+}
