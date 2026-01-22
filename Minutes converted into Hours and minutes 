@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int totalMinutes, hours, minutes;
+    printf("Enter the total minutes: ");
+    scanf("%d", &totalMinutes);
+    hours = totalMinutes / 60;
+    minutes = totalMinutes % 60;
+    printf("%d minute(s) is equal to %d %s and %d %s.\n",
+           totalMinutes,
+           hours,
+           (hours == 1) ? "hour" : "hours",
+           minutes,
+           (minutes == 1) ? "minute" : "minutes");
+    return 0;
+}
