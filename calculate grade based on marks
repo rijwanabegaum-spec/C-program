@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int totalMarks, maxMarks;
+    printf("Enter total marks obtained: ");
+    scanf("%d", &totalMarks);
+
+    printf("Enter maximum marks: ");
+    scanf("%d", &maxMarks);
+
+    if(totalMarks >= (maxMarks * 90 / 100))   
+        printf("Grade: A\n");
+    else if(totalMarks >= (maxMarks * 80 / 100)) 
+        printf("Grade: B\n");
+    else if(totalMarks >= (maxMarks * 70 / 100))  
+        printf("Grade: C\n");
+    else if(totalMarks >= (maxMarks * 60 / 100))  
+        printf("Grade: D\n");
+    else
+        printf("Grade: F\n");
+
+    return 0;
+}
