@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int units;
+    float bill;
+    printf("Enter number of units consumed: ");
+    scanf("%d", &units);
+    bill = units * 5; 
+
+    printf("Electricity Bill = ₹%.2f\n", bill);
+
+    return 0;
+}
