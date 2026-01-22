@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    float expense, total = 0;
+    char category[50];
+    printf("Enter number of expense categories: ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++) {
+        printf("\nEnter name of category %d: ", i);
+        scanf("%s", category); 
+
+        printf("Enter expense for %s: ", category);
+        scanf("%f", &expense);
+
+        total = total + expense;
+    }
+    printf("\nTotal monthly expenses = %.2f\n", total);
+    return 0;
+}
