@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int i, n;
+    char item[20], items[3][20];
+    float price[3];
+    int found = 0;
+    n = 3;
+
+    printf("Enter item names and prices:\n");
+    for (i = 0; i < n; i++) {
+        printf("Item %d name: ", i + 1);
+        scanf("%s", items[i]);
+
+        printf("Item %d price: ", i + 1);
+        scanf("%f", &price[i]);
+    }
+
+    printf("\nEnter item name to search: ");
+    scanf("%s", item);
+
+    for (i = 0; i < n; i++) {
+        if (strcmp(items[i], item) == 0) {
+            printf("Price of %s is %.2f\n", item, price[i]);
+            found = 1;
+            break;
+        }
+    }
+    if (found == 0) {
+        printf("Item not found in the shop.\n");
+    }
+    return 0;
+}
