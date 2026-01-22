@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+float calculateAverage(int total, int count)
+{
+    return (float)total / count;
+}
+int main()
+{
+    int n, i, marks, sum = 0;
+
+    printf("Enter number of subjects: ");
+    scanf("%d", &n);
+
+    printf("Enter marks for %d subjects:\n", n);
+    for(i = 1; i <= n; i++)
+    {
+        scanf("%d", &marks);
+        sum = sum + marks;
+    }
+
+    printf("Average Marks = %.2f", calculateAverage(sum, n));
+    return 0;
+}
