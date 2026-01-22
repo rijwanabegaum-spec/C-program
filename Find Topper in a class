@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n, i;
+    float marks, highest = 0;
+    char name[50], topper[50];
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        printf("\nEnter name of student %d: ", i);
+        scanf("%s", name);
+
+        printf("Enter marks of %s: ", name);
+        scanf("%f", &marks);
+
+        if (marks > highest) {
+            highest = marks;
+            strcpy(topper, name);
+        }
+    }
+    printf("\nTopper of the class is %s with %.2f marks.\n", topper, highest);
+    return 0;
+}
