@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+struct bank
+{
+    int accNo;
+    float balance;
+};
+int main()
+{
+    struct bank b;
+    int choice;
+    float amount;
+
+    printf("Enter Account Number: ");
+    scanf("%d", &b.accNo);
+    printf("Enter Initial Balance: ");
+    scanf("%f", &b.balance);
+
+    printf("\n1. Deposit\n2. Withdraw\nEnter choice: ");
+    scanf("%d", &choice);
+
+    if(choice == 1)
+    {
+        printf("Enter amount to deposit: ");
+        scanf("%f", &amount);
+        b.balance += amount;
+    }
+    else if(choice == 2)
+    {
+        printf("Enter amount to withdraw: ");
+        scanf("%f", &amount);
+        b.balance -= amount;
+    }
+    printf("Final Balance = %.2f", b.balance);
+    return 0;
+}
