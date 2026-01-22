@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+float circle(float r)
+{
+    return 3.14 * r * r;
+}
+float rectangle(float l, float b)
+{
+    return l * b;
+}
+int main()
+{
+    int choice;
+    float r, l, b;
+
+    printf("1. Area of Circle\n");
+    printf("2. Area of Rectangle\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    if(choice == 1)
+    {
+        printf("Enter radius: ");
+        scanf("%f", &r);
+        printf("Area of Circle = %.2f", circle(r));
+    }
+    else if(choice == 2)
+    {
+        printf("Enter length and breadth: ");
+        scanf("%f %f", &l, &b);
+        printf("Area of Rectangle = %.2f", rectangle(l, b));
+    }
+    else
+        printf("Invalid Choice");
+    return 0;
+}
