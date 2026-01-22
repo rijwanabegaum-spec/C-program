@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int days;
+    float savings, totalSavings = 0;
+    printf("Enter the number of days in the month: ");
+    scanf("%d", &days);
+    for (int i = 1; i <= days; i++) {
+        printf("Enter savings for day %d: ", i);
+        scanf("%f", &savings);
+        totalSavings += savings; 
+    }
+    printf("\n===== Monthly Savings Report =====\n");
+    printf("Number of days: %d\n", days);
+    printf("Total savings: %.2f\n", totalSavings);
+
+    return 0;
+}
