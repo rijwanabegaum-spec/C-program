@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int n, workedDays = 0;
+    char status[4];
+    printf("Enter the number of days in the month: ");
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++) {
+        while (1) { 
+            printf("Did you work on day %d? (yes/no): ", i);
+            scanf("%3s", status);
+            
+            for(int j = 0; status[j]; j++){
+                if(status[j] >= 'A' && status[j] <= 'Z') {
+                    status[j] = status[j] + 32;
+                }
+            }
+            if(strcmp(status, "yes") == 0) {
+                workedDays++;
+                break; 
+            } 
+            else if(strcmp(status, "no") == 0) {
+                break; 
+            } 
+            else {
+                printf("Invalid input! Please enter 'yes' or 'no'.\n");
+            }
+        }
+    }
+    printf("\nTotal number of days you worked in the month: %d\n", workedDays);
+
+    return 0;
+}
