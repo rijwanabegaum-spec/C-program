@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int days, i;
+    float sale, total = 0;
+
+    printf("Enter number of days: ");
+    scanf("%d", &days);
+
+    for(i = 1; i <= days; i++) {
+        printf("Enter sales for day %d: ", i);
+        scanf("%f", &sale);
+        total = total + sale;
+    }
+
+    printf("Total Sales = %.2f", total);
+    return 0;
+}
